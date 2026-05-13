@@ -4,26 +4,31 @@ using namespace std;
 
 int main()
 {
-    long keyNumber = 787406589;
-    int phoneNumbers[3];
-    int i = 0;
+    int keynumber = 999;
+    int phonenumbers[3];
+    bool found = false;
 
     // filling numbers
-    do
+    for (int i = 0; i < 3; i++)
     {
-        cout << "Enter your phone number" << endl;
-        cin >> phoneNumbers[i];
-        i = i + 1;
-
-    } while(i < 3);
+        cout << "Enter your phone number: ";
+        cin >> phonenumbers[i];
+    }
 
     // linear search
-    for(i = 0; i < 3; i++)
+    for (int i = 0; i < 3; i++)
     {
-        if(phoneNumbers[i] == keyNumber)
+        if (phonenumbers[i] == keynumber)
         {
-            cout << "Number Found";
+            cout << "Esther number found" << endl;
+            found = true;
+            break;
         }
+    }
+
+    if (!found)
+    {
+        cout << "Number not found" << endl;
     }
 
     return 0;
